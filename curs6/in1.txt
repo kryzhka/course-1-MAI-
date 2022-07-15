@@ -1,0 +1,15 @@
+Abdilgeev A.A 5 100 Moscow 12:00 yes no
+Shipakov B.B 3 16 Kiev 4:00 no yes
+Smirnov C.C 4 14 Abakan 3:00 yes no
+Ivanov S.S 6 50 Abaza 11:45 no yes
+Kuznetsov O.A 3 10 Abdulino 23:45 yes no
+Sokolov P.U 8 40 Abinsk 14:55 no no
+Lebedev R.R 7 45 Achinsk 14:34 no no
+Popov L.K 4 45 Adygeysk 11:15 no yes 
+Kozlov E.K 6 70 Agidel 15:15 yes no
+Novikov R.R 3 15 Agryz 16:45 no no
+Morozov E.E 7 30 Ak-Dovurak 13:45 yes no
+Petrov Q.E 4 40 Akhtubinsk 14:55 no no
+Volkov P.U 2 20 Aksay 13:34 yes no 
+Markov A.A 5 15 Dedovsk 8:11 yes yes
+Andreev T.Y 2 4 Demidov 9:14 no no

@@ -1,0 +1,98 @@
+\documentclass[a5paper,14pt]{book}
+\usepackage[OT1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+
+
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=0.5cm,bindingoffset=0cm]{geometry}
+\usepackage{setspace}
+\linespread{0.6}
+\let\emph\textit
+\usepackage[symbol*]{footmisc}
+\usepackage{amsmath, amssymb}
+\usepackage{wasysym}
+\usepackage{cases}
+\begin{document}
+\markboth{\small{\textsc{ уравнения математической физики \hspace{1cm} [гл. XVIII}}}
+{\small{\textsc{\$7] \hspace{1cm} распространение тепла в неограниченном стержне}}}
+
+\setcounter{page}{382}
+
+Это преобразование интегралл сделано путем подстановок
+$$
+ a\lambda\sqrt{t}=z, \qquad \frac{a-x}{a\sqrt{t}}=\beta \eqno{(14)}
+$$
+Обозначим
+$$
+	K(\beta)=\int_0^{+\infty} e^{-z^2} \cos{\beta z}dz. \eqno{(15)}
+$$
+Дифференцируя \footnote{)Возможность дифференцирования легко обосновываетя.}), получаем
+$$
+	K'(\beta) = - \int_0^{+\infty}e^{-z^2} z \sin{\beta z}dz.
+$$
+Интегрируя по частям, найдем
+$$
+	K'(\beta) = \frac{1}{2} [e^{-z^2} \sin{\beta z}]_0^{+\infty} +\infty 0 - \frac{\beta}{2} \int_0^{+\infty} e^{-z^2} \cos{\beta z}dz
+$$
+или
+$$
+	K'(\beta) =Ce^{-\frac{\beta^2}{4}}. \eqno{(16)}
+$$
+Определим постоянную C. Из (15) сдедует
+$$
+	K(0)=\int_0^{+\infty}e^{-z^2}dz=\frac{\sqrt{\pi}}{2}
+$$
+(см. $\mathsection$ 5 гл. XIV). Следовательно, в равенстве (16) должно быть
+$$
+	C=\frac{\sqrt{\pi}}{2}.
+$$
+Итак
+$$
+	K(\beta)=\frac{\sqrt{\pi}}{2} e^{-\frac{-\beta^2}{4}}. \eqno{(17)}
+$$
+Значение (17) интегралла (15) подставляем в (13):
+$$
+	\int_0^{+\infty}e^{-a^2\lambda^2t}\cos{\lambda}(a-x)d\lambda=\frac{1}{a\sqrt{t}}\frac{sqrt{\pi}}{2}e^{-\frac{\beta^2}{4}}.
+$$
+Подставляя вместо $\beta$ его выражение (14), окончательно получаем
+
+\newpage
+значение интегралла (13):
+$$
+	\int_0^{+\infty}e^{-a^2\lambda^2t}cos{\lambda}(a-x)d\lambda=\frac{1}{2a}\sqrt{\frac{\pi}{t}e}^{-\frac{(a-x)^2}{4a^2t}}.\eqno{(18)}
+$$
+Подставив это выражение интеграла в решение (12), окончательно получим:
+$$
+	u(x,t)=\frac{1}{2a\sqrt{\pi t}}\int_{-\infty}^{+\infty}\varphi(\alpha)e^{-\frac{(a-x)^2}{4a^2t}}d\alpha. \eqno {(19)}
+$$
+
+Эта формула, называемая \textit{интегралом Пауссона}, представляет собой решение поставленной задачи о распространении тепла в неограниченном стержне.
+
+\textsc{Замечание.} Можно доказать, что функция u(x,t), определенная интегралом (19), является решением уравнения (1) и удовлетворяет условию (2), если функция $\varphi(x)$ ограничена на бесконечном интервале $(-\infty,+\infty)$.
+
+Установим физический смысл формулы(19). Рассмотрим функцию
+\begin{equation*}
+\text{$\varphi^*(x)=$}
+\begin{cases}
+	0 &\text{при$ -\infty < x < x_0 $}\\
+	\text{$\varphi(x)$} &\text{при $ x_0 \leq x \leq x_0 +\Delta x$}\\
+	0 &\text{при $x_0+\Delta x < x < +\infty .$}
+\end{cases}
+\end{equation*}
+Тогда функция
+$$
+	u^*(x,t)=\frac{1}{2a\sqrt{\pi t}} \int_{-\infty}^{+\infty}\varphi(\alpha)e^{-\frac{(a-x)^2}{4a^2t}}d\alpha \eqno {(21)}
+$$
+Есть решение уравнения (1), принимающее при t=0 значение $\varphi *(x)$. Принимая во внимание (20), можем написать
+$$
+	u^*(x,t)=\frac{1}{2a\sqrt{\pi t}} \int_{x_0}^{x_0+\Delta x}\varphi(\alpha)e^{-\frac{(a-x)^2}{4a^2t}}d\alpha.
+$$
+Применив теорему о среднем к последующему интегралу, получим
+$$
+u^*(x,t)=\frac{\varphi(\xi)\Delta x}{2a\sqrt{\pi t}}e^{-\frac{(\xi-x)^2}{4a^2t}}, x_0 < \xi < x_0 + \Delta x. \eqno{(22)}
+$$
+Формула (22) дает значение температуры в точке стержня в любой момент времени, если при t=0 всюду в стержне температура $u^*=0$, кроме отрезка $[x_0,x_0+\Delta x]$, где она равна $\varphi(x)$. Сумма температур вида (22) и дает решение (19). Заметим, что если $\rho$- линейная плотность стержня, c - теплоемкость материала, то количество тепла в элементе $[x_0, x_0+\Delta x]$ при t=0 будет
+$$
+\Delta Q \approx  \varphi(\xi)\Delta x \rho c. \eqno{(23)}
+$$
+\end{document}
